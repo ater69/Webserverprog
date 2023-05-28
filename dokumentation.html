@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API-dokumentation</title>
+  </head>
+  <body>
+    <h1>API-dokumentation</h1>
+    <h2>Routes</h2>
+    <ul>
+      <li>
+        <strong>GET /users</strong> - Hämtar alla användare. Kräver en giltig token.
+      </li>
+      <li>
+        <strong>GET /users/{id}</strong> - Hämtar en användare med ett specifikt ID. Kräver en giltig token.
+      </li>
+      <li>
+        <strong>GET /me</strong> - Hämtar information om din token. Kräver en giltig token.
+      </li>
+      <li>
+        <strong>POST /users</strong> - Skapar en ny användare med ett hashat lösenord. Accepterar JSON-objekt i följande format: {"firstname": "", "lastname": "", "userId": "", "passwd": ""}. Kräver en giltig token.
+      </li>
+      <li>
+        <strong>POST /login</strong> - Loggar in på en befintlig användare. Accepterar JSON-objekt i följande format: {"userId": "", "passwd": ""}. Returnerar en giltig token.
+      </li>
+    </ul>
+    <script src="index.js"></script>
+  </body>
+</html>
